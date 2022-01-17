@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Light animals sounds</string>
+    <string name="title">Простые звуки животных!</string>
+    <string name="start">Start</string>
+    <string name="sound_1">Sound 1</string>
+    <string name="sound_2">Sound 2</string>
+    <string name="sound_3">Sound 3</string>
+    <string name="sound_4">Sound 4</string>
+    <string name="sound_5">Sound 5</string>
+    <string name="sound_6">Sound 6</string>
+    <string-array name="animals">
+        <item>Котики</item>
+        <item>Другие животные</item>
+    </string-array>
+</resources>
