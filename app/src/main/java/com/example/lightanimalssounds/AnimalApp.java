@@ -12,7 +12,7 @@ public class AnimalApp extends Application {
         soundManager = new SoundManager(this);
     }
 
-    public SoundManager getSoundManager(){
+    public SoundManager getSoundManager() {
         return soundManager;
     }
 }

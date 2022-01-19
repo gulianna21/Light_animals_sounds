@@ -1,15 +1,18 @@
 package com.example.lightanimalssounds;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class SoundsScreen extends AppCompatActivity {
     public static final String ANIMAL = "Animal";
-    private int startInd = 0;
+
+    private SoundViewModel viewModel;
 
     TextView animal;
     Button play1;
@@ -34,20 +37,19 @@ public class SoundsScreen extends AppCompatActivity {
 
         Bundle data = getIntent().getExtras();
         animal.setText(data.getString(ANIMAL));
+        animal.setTextColor(getResources().getColor(R.color.white, getTheme()));
 
-        if (!data.getString(ANIMAL).equals("Котики")) {
-            startInd = 6;
+        if (TextUtils.equals(data.getString(ANIMAL), "Котики")) {
+            viewModel = new ViewModelProvider(this).get(CatsSoundViewModel.class);
+        } else {
+            viewModel = new ViewModelProvider(this).get(AnimalsSoundViewModel.class);
         }
 
-        Context appContext = getApplicationContext();
-        if (appContext instanceof AnimalApp) {
-            SoundManager soundManager = ((AnimalApp) appContext).getSoundManager();
-            play1.setOnClickListener(view -> soundManager.play(startInd));
-            play2.setOnClickListener(view -> soundManager.play(startInd + 1));
-            play3.setOnClickListener(view -> soundManager.play(startInd + 2));
-            play4.setOnClickListener(view -> soundManager.play(startInd + 3));
-            play5.setOnClickListener(view -> soundManager.play(startInd + 4));
-            play6.setOnClickListener(view -> soundManager.play(startInd + 5));
-        }
+        play1.setOnClickListener(view -> viewModel.onPlaySound(SoundViewModel.SOUND1));
+        play2.setOnClickListener(view -> viewModel.onPlaySound(SoundViewModel.SOUND2));
+        play3.setOnClickListener(view -> viewModel.onPlaySound(SoundViewModel.SOUND3));
+        play4.setOnClickListener(view -> viewModel.onPlaySound(SoundViewModel.SOUND4));
+        play5.setOnClickListener(view -> viewModel.onPlaySound(SoundViewModel.SOUND5));
+        play6.setOnClickListener(view -> viewModel.onPlaySound(SoundViewModel.SOUND6));
     }
 }

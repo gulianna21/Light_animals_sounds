@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/projects/Lightanimalssounds/app/src/main/res/drawable/round.xml" value="0.23425925925925925" />
+        <entry key="..\:/projects/Lightanimalssounds/app/src/main/res/drawable/spiner.xml" value="0.14322916666666666" />
         <entry key="..\:/projects/Lightanimalssounds/app/src/main/res/layout-v28/activity_sounds_screen.xml" value="0.13020833333333334" />
         <entry key="..\:/projects/Lightanimalssounds/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/projects/Lightanimalssounds/app/src/main/res/layout/activity_sounds_screen.xml" value="0.16799999999999998" />
+        <entry key="..\:/projects/Lightanimalssounds/app/src/main/res/layout/activity_sounds_screen.xml" value="0.1" />
       </map>
     </option>
   </component>
